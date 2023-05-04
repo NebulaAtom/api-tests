@@ -1,0 +1,66 @@
+[
+    {
+        "type": "limit"
+        ,"content": 20
+    }
+    ,{
+        "type": "sort"
+        ,"contents": ["id ASC", "reg_date DESC"]
+    }
+    ,{
+        "type": "iqual"
+        ,"col": "id"
+        ,"content": 21
+    }
+    ,{
+        "type": "notiqual"
+        ,"col": "id"
+        ,"content": 21
+    }
+    ,{
+        "type": "greatherthan"
+        ,"col": "age"
+        ,"content": 21
+    }
+    ,{
+        "type": "smallerthan"
+        ,"col": "age"
+        ,"content": 21
+    }
+    ,{
+        "type": "between"
+        ,"col": "reg_date"
+        ,"content1": "2021-01-01"
+        ,"content2": "2021-02-01"
+    }
+    ,{
+        "type": "in"
+        ,"col": "city"
+        ,"contents": ["New York", "Denver", "Miami"]
+    }
+    ,{
+        "type": "notin"
+        ,"col": "city"
+        ,"contents": ["New York", "Denver", "Miami"]
+    }
+    ,{
+        "type": "set"
+        ,"col": "age"
+        ,"content": 21
+    }
+    ,{
+        "type": "joins"
+        ,"join-type": "inner"
+        ,"table": "table_name"
+        ,"on":
+        [
+            {"col": "column-name", "value": "some-value"}
+            ,{"col": "column-name2", "value": "some-value2"}
+        ]
+    }
+    ,{
+        "type": "like"
+        ,"col": "name"
+        ,"content": "%res%"
+    }
+]
