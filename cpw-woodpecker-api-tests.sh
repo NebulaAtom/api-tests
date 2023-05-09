@@ -27,7 +27,7 @@ case $1 in
         curl \
             -X GET https://127.0.0.1:8080/api/v0/products \
             -H "Content-Type: application/json" -k \
-            --cookie "cpw-woodpecker-sid: ${cpw_woodpecker_sid}" \
+            --cookie "cpw-woodpecker-sid=${cpw_woodpecker_sid}" \
             -d @./http_request_body_get.json
 
         printf "\n"
@@ -39,7 +39,7 @@ case $1 in
         curl \
             -X POST https://127.0.0.1:8080/api/v0/products \
             -H "Content-Type: application/json" -k \
-            --cookie "cpw-woodpecker-sid: ${cpw_woodpecker_sid}" \
+            --cookie "cpw-woodpecker-sid=${cpw_woodpecker_sid}" \
             -d @./http_request_body_post.json
 
         printf "\n"
@@ -51,7 +51,7 @@ case $1 in
         curl \
             -X PUT https://127.0.0.1:8080/api/v0/products \
             -H "Content-Type: application/json" -k \
-            --cookie "cpw-woodpecker-sid: ${cpw_woodpecker_sid}" \
+            --cookie "cpw-woodpecker-sid=${cpw_woodpecker_sid}" \
             -d @./http_request_body_put.json
 
         printf "\n"
@@ -63,7 +63,7 @@ case $1 in
         curl \
             -X DEL https://127.0.0.1:8080/api/v0/products \
             -H "Content-Type: application/json" -k \
-            --cookie "cpw-woodpecker-sid: ${cpw_woodpecker_sid}" \
+            --cookie "cpw-woodpecker-sid=${cpw_woodpecker_sid}" \
             -d @./http_request_body_del.json
 
         printf "\n"
@@ -75,7 +75,7 @@ case $1 in
         curl \
             -X GET https://127.0.0.1:8080/api/v0/products \
             -H "Content-Type: application/json" -k \
-            --cookie "cpw-woodpecker-sid: ${cpw_woodpecker_sid}" \
+            --cookie "cpw-woodpecker-sid=${cpw_woodpecker_sid}" \
             -d @./http_request_body_get.json
 
         printf "\n"
