@@ -54,7 +54,7 @@
     ,{
         "type": "joins"
         ,"join-type": "inner"
-        ,"table": "table_name"
+        ,"table": "stores"
         ,"on":
         [
             {"col": "column-name", "value": "some-value"}

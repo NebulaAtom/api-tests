@@ -19,42 +19,32 @@ printf "CPW Woodpecker Session ID: ${cpw_woodpecker_sid}\n"
 
 # Execute the method
 
+printf "$1:\n"
+
 case $1 in
-
-    GET)
-        # GET Method
-
-        curl \
-            -X GET https://127.0.0.1:8080/api/v0/products \
-            -H "Content-Type: application/json" -k \
-            --cookie "cpw-woodpecker-sid=${cpw_woodpecker_sid}" \
-            -d @./http_request_body_get.json
-
-        printf "\n"
-    ;;
 
     POST)
         # POST Method
 
         curl \
-            -X POST https://127.0.0.1:8080/api/v0/products \
+            -X POST https://127.0.0.1:8080/api/v0/stores \
             -H "Content-Type: application/json" -k \
             --cookie "cpw-woodpecker-sid=${cpw_woodpecker_sid}" \
             -d @./http_request_body_post.json
 
-        printf "\n"
+        printf "\nEND POST\n"
     ;;
 
     PUT)
         # PUT Method
 
         curl \
-            -X PUT https://127.0.0.1:8080/api/v0/products \
+            -X PUT https://127.0.0.1:8080/api/v0/stores \
             -H "Content-Type: application/json" -k \
             --cookie "cpw-woodpecker-sid=${cpw_woodpecker_sid}" \
             -d @./http_request_body_put.json
 
-        printf "\n"
+        printf "\nEND PUT\n"
     ;;
 
     DEL)
@@ -66,10 +56,10 @@ case $1 in
             --cookie "cpw-woodpecker-sid=${cpw_woodpecker_sid}" \
             -d @./http_request_body_del.json
 
-        printf "\n"
+        printf "\nEND DEL\n"
     ;;
 
-    *)
+    GET | *)
         # GET Method
 
         curl \
@@ -78,6 +68,7 @@ case $1 in
             --cookie "cpw-woodpecker-sid=${cpw_woodpecker_sid}" \
             -d @./http_request_body_get.json
 
-        printf "\n"
+        printf "\nEND GET\n"
     ;;
+
 esac
