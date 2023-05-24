@@ -27,7 +27,7 @@ case $1 in
         # POST Method
 
         curl \
-            -X POST https://127.0.0.1:8080/api/v0/stores \
+            -X POST https://127.0.0.1:8080/api/v0/products \
             -H "Content-Type: application/json" -k \
             --cookie "cpw-woodpecker-sid=${cpw_woodpecker_sid}" \
             -d @./http_request_body_post.json
@@ -39,7 +39,7 @@ case $1 in
         # PUT Method
 
         curl \
-            -X PUT https://127.0.0.1:8080/api/v0/stores \
+            -X PUT https://127.0.0.1:8080/api/v0/products \
             -H "Content-Type: application/json" -k \
             --cookie "cpw-woodpecker-sid=${cpw_woodpecker_sid}" \
             -d @./http_request_body_put.json

@@ -5,7 +5,12 @@
     }
     ,{
         "type": "sort"
-        ,"contents": ["id ASC", "reg_date DESC"]
+        ,"contents":
+        [
+            {"value": "id", "order": "ASC"}
+            ,{"value": "col2", "order": "DESC"}
+            ,{"value": "col3"}
+        ]
     }
     ,{
         "type": "iqual"

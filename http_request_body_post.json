@@ -1,15 +1,20 @@
 [
     {
         "type": "fields"
-        ,"contents": ["name", "type", "reg_date", "field1", "field-text"]
+        ,"contents":
+        [
+            {"field": "name", "as": ""}
+            ,{"field": "type", "as": ""}
+            ,{"field": "CAST(reg_date AS DATE)", "as": "date"}
+        ]
     }
     ,{
         "type": "values"
         ,"contents":
         [
-            ["name1", "type1", "2021-01-01", 4, 3.12, null]
-            ,["name2", "type2", "2021-01-02", 5, 3.13, ""]
-            ,["name3", "type3", "2021-01-03", 6, 3.14, null]
+            ["name1", "type1", "2021-01-01"]
+            ,["name2", "type2", "2021-01-02"]
+            ,["name3", "type3", "2021-01-03"]
         ]
     }
 ]

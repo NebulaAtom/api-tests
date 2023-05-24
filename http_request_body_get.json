@@ -1,7 +1,12 @@
 [
     {
         "type": "fields"
-        ,"contents": ["name", "type", "reg_date"]
+        ,"contents":
+        [
+            {"field": "name", "as": ""}
+            ,{"field": "type", "as": ""}
+            ,{"field": "CAST(reg_date AS DATE)", "as": "date"}
+        ]
     }
     ,{
         "type": "page"
@@ -13,7 +18,12 @@
     }
     ,{
         "type": "sort"
-        ,"contents": ["id ASC", "reg_date DESC"]
+        ,"contents":
+        [
+            {"value": "id", "order": "ASC"}
+            ,{"value": "col2", "order": "DESC"}
+            ,{"value": "col3"}
+        ]
     }
     ,{
         "type": "iqual"
@@ -55,6 +65,7 @@
         "type": "joins"
         ,"join-type": "inner"
         ,"table": "stores"
+        ,"as": "tn"
         ,"on":
         [
             {"col": "column-name", "value": "some-value"}
@@ -73,10 +84,5 @@
     ,{
         "type": "group"
         ,"contents": ["db1.id ASC", "db2.reg_date DESC"]
-    }
-    ,{
-        "type": "call"
-        ,"procedure": "database.procedure_name"
-        ,"parameters": ["2", "2023-04-01", "Some text"]
     }
 ]
