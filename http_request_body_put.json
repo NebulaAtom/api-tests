@@ -35,14 +35,12 @@
         ]
     }
     ,{
-        "type": "in"
-        ,"col": "city"
-        ,"contents": ["New York", "Denver", "Miami"]
-    }
-    ,{
-        "type": "notin"
-        ,"col": "city"
-        ,"contents": ["New York", "Denver", "Miami"]
+        "type": "list"
+        ,"contents":
+        [
+            {"col": "state", "type": "in", "values": ["Anzoategui", "Merida", "Aragua"]}
+            ,{"col": "age", "type": "not-in", "values": [4, 7, 12, 45]}
+        ]
     }
     ,{
         "type": "set"
