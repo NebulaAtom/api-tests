@@ -56,8 +56,13 @@
     }
     ,{
         "type": "set"
-        ,"col": "age"
-        ,"content": 21
+        ,"contents":
+        [
+            {"col": "col1", "value": "value", "type": "quotes"}
+            ,{"col": "col2", "value": "var", "type": "no-quotes"}
+            ,{"col": "col2", "value": 1, "type": "no-quotes"}
+            ,{"col": "col2", "value": true, "type": "no-quotes"}
+        ]
     }
     ,{
         "type": "join"
