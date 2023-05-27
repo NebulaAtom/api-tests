@@ -9,14 +9,6 @@
         ]
     }
     ,{
-        "type": "page"
-        ,"content": 3
-    }
-    ,{
-        "type": "limit"
-        ,"content": 20
-    }
-    ,{
         "type": "sort"
         ,"contents":
         [
@@ -26,30 +18,30 @@
         ]
     }
     ,{
+        "type": "general"
+        ,"page": 3
+        ,"limit": 20
+        ,"as": "db"
+    }
+    ,{
         "type": "iqual"
-        ,"col": "id"
-        ,"content": 21
+        ,"contents":
+        [
+            {"col": "id", "value": 21, "not": false}
+            ,{"col": "city", "value": "Anaco", "not": true}
+            ,{"col": "bool_condition", "value": false}
+            ,{"col": "CAST(reg_date AS DATE)", "value": "2023-05-01"}
+        ]
     }
     ,{
-        "type": "notiqual"
-        ,"col": "id"
-        ,"content": 21
-    }
-    ,{
-        "type": "greatherthan"
-        ,"col": "age"
-        ,"content": 21
-    }
-    ,{
-        "type": "smallerthan"
-        ,"col": "age"
-        ,"content": 21
-    }
-    ,{
-        "type": "between"
-        ,"col": "reg_date"
-        ,"content1": "2021-01-01"
-        ,"content2": "2021-02-01"
+        "type": "range"
+        ,"contents":
+        [
+            {"col": "id", "value": 21, "type": "greather"}
+            ,{"col": "height", "value": 1.8, "type": "greather-iqual"}
+            ,{"col": "CAST(reg_date AS DATE)", "value": "2023-05-01", "type": "smaller"}
+            ,{"col": "CAST(reg_date AS DATE)", "value": "2023-05-05", "type": "smaller-iqual"}
+        ]
     }
     ,{
         "type": "in"
@@ -76,10 +68,6 @@
         "type": "like"
         ,"col": "name"
         ,"content": "%res%"
-    }
-    ,{
-        "type": "as"
-        ,"content": "db1"
     }
     ,{
         "type": "group"
