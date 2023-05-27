@@ -12,9 +12,10 @@
         "type": "values"
         ,"contents":
         [
-            ["name1", "type1", "2021-01-01"]
-            ,["name2", "type2", "2021-01-02"]
-            ,["name3", "type3", "2021-01-03"]
+            {"value": "val1", "type": "quotes"}
+            ,{"value": "val2", "type": "quotes"}
+            ,{"value": "val3", "type": "no-quotes"}
+            ,{"value": "val4", "type": "no-quotes"}
         ]
     }
 ]
