@@ -77,7 +77,7 @@
         ,"contents":
         [
             {"col": "tn.id", "type": "asc"}
-            {"col": "tn2.city", "type": "asc"}
+            ,{"col": "tn2.city", "type": "desc"}
         ]
     }
 ]
