@@ -52,23 +52,32 @@
         ]
     }
     ,{
-        "type": "joins"
-        ,"join-type": "inner"
-        ,"table": "stores"
-        ,"as": "tn"
-        ,"on":
+        "type": "like"
+        ,"contents":
         [
-            {"col": "column-name", "value": "some-value"}
-            ,{"col": "column-name2", "value": "some-value2"}
+            {"col": "value1", "value": "text1", "type": "%like"}
+            ,{"col": "value2", "value": "text2", "type": "like%"}
+            ,{"col": "value3", "value": "text3", "type": "%like%"}
+            ,{"col": "value4", "value": "text4", "type": "_like"}
+            ,{"col": "value5", "value": "text5", "type": "like_"}
+            ,{"col": "value6", "value": "text6", "type": "_like_"}
         ]
     }
     ,{
-        "type": "like"
-        ,"col": "name"
-        ,"content": "%res%"
+        "type": "join"
+        ,"contents":
+        [
+            {"table": "table_name", "as": "tn", "type": "inner", "on": [{"col": "colum1_1", "value": "var1_1"}, {"col": "colum1_2", "value": "var1_2"}]}
+            ,{"table": "table_name", "as": "tn2", "type": "left", "on": [{"col": "colum2_1", "value": "var2_1"}, {"col": "colum2_2", "value": "var2_2"}]}
+            ,{"table": "table_name", "as": "tn3", "type": "right", "on": [{"col": "colum3_1", "value": "var3_1"}, {"col": "colum_3_2", "value": "var3_2"}]}
+        ]
     }
     ,{
         "type": "group"
-        ,"contents": ["db1.id ASC", "db2.reg_date DESC"]
+        ,"contents":
+        [
+            {"col": "tn.id", "type": "asc"}
+            {"col": "tn2.city", "type": "asc"}
+        ]
     }
 ]
