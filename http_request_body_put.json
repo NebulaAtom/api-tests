@@ -66,9 +66,12 @@
         ,"contents":
         [
             {"col": "col1", "value": "value", "type": "quotes"}
-            ,{"col": "col2", "value": "var", "type": "no-quotes"}
             ,{"col": "col2", "value": 1, "type": "no-quotes"}
-            ,{"col": "col2", "value": true, "type": "no-quotes"}
+            ,{"col": "col3", "value": 2.2, "type": "no-quotes"}
+            ,{"col": "col4", "value": false, "type": "no-quotes"}
+            ,{"col": "col5", "value": "null", "type": "no-quotes"}
+            ,{"col": "col6", "value": "NOW()", "type": "no-quotes"}
+            ,{"col": "col7", "value": "2023-05-01", "type": "quotes"}
         ]
     }
     ,{
