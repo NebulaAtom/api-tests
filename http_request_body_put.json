@@ -45,8 +45,8 @@
         "type": "list"
         ,"contents":
         [
-            {"col": "state", "type": "in", "values": ["Anzoategui", "Merida", "Aragua"]}
-            ,{"col": "age", "type": "not-in", "values": [4, 7, 12, 45]}
+            {"col": "state", "type": "in", "values": ["Anzoategui", 13, 1.9, false]}
+            ,{"col": "age", "type": "not-in", "values": [{"value": "NULL", "quotes": "n"}, "2023-01-01", {"value": "NOW()", "quotes": "n"}]}
         ]
     }
     ,{
