@@ -3,17 +3,20 @@
         "type": "fields"
         ,"contents":
         [
-            {"field": "name", "as": ""}
-            ,{"field": "type", "as": ""}
-            ,{"field": "CAST(reg_date AS DATE)", "as": "date"}
+            {"field": "name", "as": "", "type": "quotes"}
+            ,{"field": 10, "as": "", "type": "no-quotes"}
+            ,{"field": 1.5, "as": "", "type": "no-quotes"}
+            ,{"field": false, "as": "", "type": "no-quotes"}
+            ,{"field": null, "as": "", "type": "no-quotes"}
+            ,{"field": "CAST(reg_date AS DATE)", "as": "date", "type": "no-quotes"}
         ]
     }
     ,{
         "type": "sort"
         ,"contents":
         [
-            {"value": "id", "order": "ASC"}
-            ,{"value": "col2", "order": "DESC"}
+            {"value": "id", "type": "ASC"}
+            ,{"value": "col2", "type": "DESC"}
             ,{"value": "col3"}
         ]
     }
@@ -27,10 +30,10 @@
         "type": "iqual"
         ,"contents":
         [
-            {"col": "id", "value": 21, "not": false}
-            ,{"col": "city", "value": "Anaco", "not": true}
-            ,{"col": "bool_condition", "value": false}
-            ,{"col": "CAST(reg_date AS DATE)", "value": "2023-05-01"}
+            {"col": "id", "value": 21, "type": "iqual"}
+            ,{"col": "city", "value": "Anaco", "type": "iqual"}
+            ,{"col": "bool_condition", "value": false, "type": "no-iqual"}
+            ,{"col": "CAST(reg_date AS DATE)", "value": "2023-05-01", "type": "no-iqual"}
         ]
     }
     ,{

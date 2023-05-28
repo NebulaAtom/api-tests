@@ -3,8 +3,8 @@
         "type": "sort"
         ,"contents":
         [
-            {"value": "id", "order": "ASC"}
-            ,{"value": "col2", "order": "DESC"}
+            {"value": "id", "type": "ASC"}
+            ,{"value": "col2", "type": "DESC"}
             ,{"value": "col3"}
         ]
     }
@@ -18,10 +18,11 @@
         "type": "iqual"
         ,"contents":
         [
-            {"col": "id", "value": 21, "not": false}
-            ,{"col": "city", "value": "Anaco", "not": true}
-            ,{"col": "bool_condition", "value": false}
-            ,{"col": "CAST(reg_date AS DATE)", "value": "2023-05-01"}
+            {"col": "id", "value": 21, "type": "iqual"}
+            ,{"col": "city", "value": "Anaco", "type": "iqual"}
+            ,{"col": "bool_condition", "value": false, "type": "no-iqual"}
+            ,{"col": "CAST(reg_date AS DATE)", "value": "2023-05-01", "type": "no-iqual"}
+            ,{"col": "CAST(reg_date AS DATE)", "value": null, "type": "no-iqual"}
         ]
     }
     ,{
