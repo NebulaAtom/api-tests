@@ -16,9 +16,12 @@
         ,"contents":
         [
             {"value": "val1", "type": "quotes"}
-            ,{"value": "val2", "type": "quotes"}
-            ,{"value": "val3", "type": "no-quotes"}
-            ,{"value": "val4", "type": "no-quotes"}
+            ,{"value": 23, "type": "no-quotes"}
+            ,{"value": 2.3, "type": "no-quotes"}
+            ,{"value": true, "type": "no-quotes"}
+            ,{"value": "null", "type": "no-quotes"}
+            ,{"value": "NOW()", "type": "no-quotes"}
+            ,{"value": "2023-05-01", "type": "quotes"}
         ]
     }
 ]
