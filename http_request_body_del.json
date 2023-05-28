@@ -21,9 +21,11 @@
         "type": "sort"
         ,"contents":
         [
-            {"value": "id", "type": "ASC"}
-            ,{"value": "col2", "type": "DESC"}
-            ,{"value": "col3"}
+            {"col": "name2", "type": "asc"}
+            ,{"col": 11, "type": "desc"}
+            ,{"col": 1.6, "type": "desc"}
+            ,{"col": true, "type": "desc"}
+            ,{"col": "CAST(reg_date2 AS DATE)", "type": "asc"}
         ]
     }
     ,{
