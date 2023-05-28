@@ -77,9 +77,9 @@
         "type": "join"
         ,"contents":
         [
-            {"table": "table_name", "as": "tn", "type": "inner", "on": [{"col": "colum1_1", "value": "var1_1"}, {"col": "colum1_2", "value": "var1_2"}]}
-            ,{"table": "table_name", "as": "tn2", "type": "left", "on": [{"col": "colum2_1", "value": "var2_1"}, {"col": "colum2_2", "value": "var2_2"}]}
-            ,{"table": "table_name", "as": "tn3", "type": "right", "on": [{"col": "colum3_1", "value": "var3_1"}, {"col": "colum_3_2", "value": "var3_2"}]}
+            {"table": "table_name", "as": "tn", "type": "inner", "on": [{"col": "colum1_1", "value": "var1_1"}, {"col": "colum1_2", "value-quoted": "var1_2"}]}
+            ,{"table": "table_name", "as": "tn2", "type": "left", "on": [{"col": "colum2_1", "value": "var2_1"}, {"col": "colum2_2", "value": 2.2}]}
+            ,{"table": "table_name", "as": "tn3", "type": "right", "on": [{"col": "colum3_1", "value": "null"}, {"col": "colum_3_2", "value": false}]}
         ]
     }
 ]
