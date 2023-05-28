@@ -7,7 +7,7 @@
             ,{"field": 10, "as": "", "type": "no-quotes"}
             ,{"field": 1.5, "as": "", "type": "no-quotes"}
             ,{"field": false, "as": "", "type": "no-quotes"}
-            ,{"field": null, "as": "", "type": "no-quotes"}
+            ,{"field": "null", "as": "", "type": "no-quotes"}
             ,{"field": "CAST(reg_date AS DATE)", "as": "date", "type": "no-quotes"}
         ]
     }
@@ -36,7 +36,7 @@
             ,{"col": "col2", "value": 12, "type": "iqual"}
             ,{"col": "col3", "value": 1.7, "type": "iqual"}
             ,{"col": "col4", "value": false, "type": "no-iqual"}
-            ,{"col": "col5", "value": null, "type": "no-iqual"}
+            ,{"col": "col5", "value": "null", "type": "no-iqual"}
             ,{"col": "CAST(reg_date AS DATE)", "value": "CAST(NOW() AS DATE)", "type": "no-iqual"}
         ]
     }
@@ -44,10 +44,13 @@
         "type": "range"
         ,"contents":
         [
-            {"col": "id", "value": 21, "type": "greather"}
-            ,{"col": "height", "value": 1.8, "type": "greather-iqual"}
-            ,{"col": "CAST(reg_date AS DATE)", "value": "2023-05-01", "type": "smaller"}
-            ,{"col": "CAST(reg_date AS DATE)", "value": "2023-05-05", "type": "smaller-iqual"}
+            {"col": "col1", "value": "value1", "type": "greather-quotes"}
+            ,{"col": "col2", "value": 21, "type": "greather"}
+            ,{"col": "col3", "value": 1.8, "type": "greather-iqual"}
+            ,{"col": "col4", "value": false, "type": "smaller"}
+            ,{"col": "col5", "value": "null", "type": "smaller-iqual"}
+            ,{"col": "CAST(reg_date AS DATE)", "value": "NOW()", "type": "smaller-iqual"}
+            ,{"col": "CAST(reg_date AS DATE)", "value": "2023-05-01", "type": "smaller-iqual-quotes"}
         ]
     }
     ,{
