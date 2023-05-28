@@ -32,10 +32,12 @@
         "type": "iqual"
         ,"contents":
         [
-            {"col": "id", "value": 21, "type": "iqual"}
-            ,{"col": "city", "value": "Anaco", "type": "iqual"}
-            ,{"col": "bool_condition", "value": false, "type": "no-iqual"}
-            ,{"col": "CAST(reg_date AS DATE)", "value": "2023-05-01", "type": "no-iqual"}
+            {"col": "col1", "value": "value1", "type": "iqual-quotes"}
+            ,{"col": "col2", "value": 12, "type": "iqual"}
+            ,{"col": "col3", "value": 1.7, "type": "iqual"}
+            ,{"col": "col4", "value": false, "type": "no-iqual"}
+            ,{"col": "col5", "value": null, "type": "no-iqual"}
+            ,{"col": "CAST(reg_date AS DATE)", "value": "CAST(NOW() AS DATE)", "type": "no-iqual"}
         ]
     }
     ,{
