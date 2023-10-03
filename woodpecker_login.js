@@ -24,7 +24,4 @@ const search_sid = function(response, callback)
 
 };
 
-login(function(sid)
-{
-    console.log(sid);
-});
+exports.login = login;
