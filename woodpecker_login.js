@@ -6,7 +6,7 @@ const login = function(callback)
 {
     axios.post('https://127.0.0.1:8080/api/v0/system/login', [{"user": "root", "password": "root_password"}])
     .then(res => search_sid(res, callback))
-    .catch(err => console.error(`Error al iniciar sesion: ${err}`))
+    .catch(err => console.error(`Error al iniciar sesion: ${err.response.data.message}`))
     ;
 }
 

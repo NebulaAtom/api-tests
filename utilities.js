@@ -19,7 +19,7 @@ exports.utilities =
 {
     start_message: start_message
     ,end_message: end_message
-    ,request : (test_name, json_data, target, callback = function(){}) => wl.login(function(sid)
+    ,request_get : (test_name, json_data, target, callback = function(){}) => wl.login(function(sid)
     {
         start_message(test_name);
     
@@ -30,12 +30,14 @@ exports.utilities =
         }})
         .then(res => 
         {
+            console.log(`SID: ${sid}`);
             console.log(res.data);
             end_message(test_name);
             callback();
         })
         .catch(err =>
         {
+            console.log(`SID: ${sid}`);
             console.error(err.response.data)
             end_message(test_name);
         })
