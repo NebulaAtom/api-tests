@@ -21,8 +21,6 @@ exports.utilities =
     ,end_message: end_message
     ,request_get : (test_name, json_data, target, callback = function(){}) => wl.login(function(sid)
     {
-        start_message(test_name);
-    
         axios.get(`https://127.0.0.1:8080/api/${target}?json=${JSON.stringify(json_data)}`, {headers:
         {
             'Cookie': `cpw-woodpecker-sid=${sid}`
@@ -30,6 +28,7 @@ exports.utilities =
         }})
         .then(res => 
         {
+            start_message(test_name);
             console.log(`SID: ${sid}`);
             console.log(res.data);
             end_message(test_name);
